@@ -1,0 +1,112 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --accent:#4f46e5;
+  --muted:#6b7280;
+  --danger:#ef4444;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#111827;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:24px;
+}
+
+.app-root{
+  max-width:760px;
+  margin:20px auto;
+  padding:10px;
+}
+
+.header{
+  text-align:center;
+  margin-bottom:16px;
+}
+.header h1{ margin:0; font-size:28px; letter-spacing: -0.5px;}
+.sub{ color:var(--muted); margin-top:6px; font-size:13px }
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:0 6px 18px rgba(16,24,40,0.06);
+}
+
+/* Input */
+.todo-input{
+  display:flex;
+  gap:8px;
+  margin-bottom:12px;
+}
+.todo-input .input{
+  flex:1;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  font-size:15px;
+  outline:none;
+}
+.btn{
+  padding:10px 12px;
+  border-radius:8px;
+  border:none;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn.small{ padding:6px 8px; font-size:13px }
+.btn.danger{ background:var(--danger) }
+
+/* Filter */
+.filter-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+  gap:8px;
+}
+.chip{
+  border:1px solid #e6e9ef;
+  background:transparent;
+  padding:6px 10px;
+  border-radius:999px;
+  cursor:pointer;
+  margin-left:6px;
+}
+.chip.active{
+  background:var(--accent);
+  color:white;
+  border-color:transparent;
+}
+
+/* List */
+.todo-list{ list-style:none; padding:0; margin:0; }
+.todo-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #f0f2f7;
+  margin-bottom:8px;
+}
+.todo-item .left{ display:flex; align-items:center; gap:10px; flex:1; min-width:0 }
+.task-text{ word-break:break-word; }
+.task-text.done{ text-decoration:line-through; color:var(--muted) }
+.edit-input{
+  flex:1;
+  padding:8px 10px;
+  border-radius:6px;
+  border:1px solid #e6e9ef;
+}
+
+/* Empty */
+.empty{ color:var(--muted); padding:18px; text-align:center }
